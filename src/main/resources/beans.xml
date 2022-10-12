@@ -8,15 +8,18 @@
        https://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:annotation-config/>
+
+    <context:property-placeholder location="classpath:greeting.properties" />
+
     <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
 
-    <bean id="email" class="com.nhnacademy.edu.springframework.messagesender.service.EmailMessageSender" scope="singleton" destroy-method="destroy">
-    </bean>
+<!--    <bean id="email" class="com.nhnacademy.edu.springframework.messagesender.service.EmailMessageSender" scope="singleton" destroy-method="destroy">-->
+<!--    </bean>-->
 
 
-    <bean id="sms" class="com.nhnacademy.edu.springframework.messagesender.service.SmsMessageSender" scope="prototype" init-method="init">
-        <qualifier type="com.nhnacademy.edu.springframework.messagesender.annotaition.SMS"/>
-    </bean>
+<!--    <bean id="sms" class="com.nhnacademy.edu.springframework.messagesender.service.SmsMessageSender" scope="prototype" init-method="init">-->
+<!--        <qualifier type="com.nhnacademy.edu.springframework.messagesender.annotaition.SMS"/>-->
+<!--    </bean>-->
 
     <bean id="messagesendservice" class="com.nhnacademy.edu.springframework.messagesender.service.MessageSendService" >
     </bean>
